@@ -1,0 +1,20 @@
+{
+  "name": "conversor-ui-angular",
+  "description": "Conversor AngularJS",
+  "author": "",
+  "dependencies": {
+    "angular": "^1.4.1",
+    "bootstrap": "^3.3.5",
+    "angular-ui-bootstrap": "^0.13.3",
+    "jquery": "^2.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angularjs"
+  ],
+  "author": "",
+  "license": "ISC"
+}
