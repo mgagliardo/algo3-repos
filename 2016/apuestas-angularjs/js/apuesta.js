@@ -5,7 +5,19 @@ function Apuesta() {
     this.tipoApuesta = null;
     this.valorApostado = null;
     this.resultado = null;
+
+    this.apostar = function() {
+      var numeroGanador = Math.floor(Math.random() * 37);
+      var gano = this.tipoApuesta.esGanador(numeroGanador, this.valorApostado);
+      var ganancia = 0;
+      if (gano) {
+        ganancia = this.monto * this.tipoApuesta.ganancia;
+      }
+      this.resultado = new Resultado(gano, numeroGanador, ganancia);
+    };
 }
+
+
 
 function Pleno() {
     "use strict";
