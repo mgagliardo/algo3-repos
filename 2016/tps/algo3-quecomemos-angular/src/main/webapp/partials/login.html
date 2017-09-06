@@ -1,0 +1,24 @@
+<form class="form-horizontal well well-lg">
+    <div class="form-group">
+    <div class="alert alert-danger animate-repeat" ng-repeat="error in loginCtrl.errors">{{error}}</div>
+        <div class="col-sm-3 col-sm-offset-3">
+            <span><h4>Nombre</h4></span>
+        </div>
+        <div class="col-sm-2">
+            <input type="text" ng-model="loginCtrl.infologin.nombre" name="nombre" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3 col-sm-offset-3">
+            <span><h4>Contraseña</h4></span>
+        </div>
+        <div class="col-sm-2">
+            <input type="password" ng-model="loginCtrl.infologin.contrasenia" name="contrasenia" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3 col-sm-offset-5">
+            <button type="button" class="btn btn-primary" data-ng-click="loginCtrl.logear()">Login</button>
+        </div>
+    </div>
+</form>

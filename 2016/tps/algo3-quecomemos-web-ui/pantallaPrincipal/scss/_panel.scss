@@ -1,0 +1,17 @@
+.panel {
+  width: 100%;
+  text-align: center;
+  @include border-color($background-main-color);
+  @include border-radius($border-radius);
+
+  .panel-heading {
+    background-color: $background-main-color;
+    color: $font-main-color;
+    height: 30px;
+    font-size: $titles-font-size;
+  }
+
+  .panel-body {
+    padding: 20px;
+  }
+}

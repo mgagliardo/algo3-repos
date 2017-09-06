@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">QueComemos</string>
+    <string name="title_receta_detail">receta Detail</string>
+    <string name="favorita">Favorita</string>
+</resources>

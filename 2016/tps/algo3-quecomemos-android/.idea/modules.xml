@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/algo3-quecomemos-android.iml" filepath="$PROJECT_DIR$/algo3-quecomemos-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/queComemosApp/queComemosApp.iml" filepath="$PROJECT_DIR$/queComemosApp/queComemosApp.iml" />
+    </modules>
+  </component>
+</project>

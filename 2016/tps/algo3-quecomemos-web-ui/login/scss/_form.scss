@@ -1,0 +1,13 @@
+.form {
+  width: 70%;
+
+  .form-input {
+    width: 100%;
+    display: block;
+  }
+
+  .form-label {
+    float: left;
+    font-size: ($titles-font-size - 4px);
+  }
+}

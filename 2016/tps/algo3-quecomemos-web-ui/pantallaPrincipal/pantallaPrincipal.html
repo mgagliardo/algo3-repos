@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TP QUE COMEMOS</title>
+
+  <link href="css/main.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+
+  <div class="panel">
+    <div class="panel-heading">Consulta de receta</div>
+    <div class="panel-body">
+
+        <TABLE WIDTH="40%" ALIGN=CENTER CELLSPACING=10px>
+          
+            <tr>
+              <td><label class="form-label" for="ingrediente">Nombre</label></td>
+              <td><label class="table-label" for="ingrediente">Calorias</label></td>
+            </tr>
+            <tr>
+              <td><input class="form-input" type="nombre" id="nombre"/></td>
+              <td>De  <input class="form-input" type="caloriasMinimas" id="caloriasMinimas"/>  A  <input class="form-input" type="caloriasMaximas" id="caloriasMaximas"/></td>
+            </tr>
+            <tr>
+              <td><label class="form-label" for="ingrediente">Dificultad</label></td>
+              <td><label class="form-label" for="ingrediente">Temporada</label></td>
+            </tr>
+            <tr>
+              <td><select name="dificultad"/></td>
+              <td><select name="temporada"/></td>
+            </tr>
+            <tr>
+              <td><label class="form-label" for="contenerIng">Que contenga ingrediente</label></td>
+            </tr>
+            <tr>
+              <td><input class="form-input" type="ingrediente" id="ingrediente"/></td>
+              <td><input type="checkbox" name"filtrosUsuario"/><label class="form-label" for="checkbox">Aplicar filtro de usuario</label></td>
+            </tr>
+          </TABLE>
+
+        <button class="primary">Buscar</button>
+        <button class="secondary">Volver</button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

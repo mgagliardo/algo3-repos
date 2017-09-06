@@ -1,0 +1,102 @@
+<form class="form-horizontal well well-lg">
+    <div class="container table table-bordered">
+        <div class="form-group">
+            <div class="col-sm-3">
+                <span><h4>{{detalleRecetaCtrl.receta.nombreDeLaReceta}}</h4></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-2">
+                <span>{{detalleRecetaCtrl.receta.calorias}} calorias</span>
+            </div>
+            <div class="col-sm-2">
+                <span>Creado por {{detalleRecetaCtrl.receta.autor}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-1">
+            <label>Dificultad</label>
+        </div>
+        <div class="col-sm-1 col-sm-offset-5">
+            <label>Temporada</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-1">
+            <span>{{detalleRecetaCtrl.receta.dificultadDePreparacion}}</span>
+        </div>
+        <div class="col-sm-2 col-sm-offset-5">
+            <span>{{detalleRecetaCtrl.receta.temporadaALaQueCorresponde}}</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-1">
+            <label>Ingredientes</label>
+        </div>
+        <div class="col-sm-1 col-sm-offset-5">
+            <label>Condimentos</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <table class="table table-bordered table-responsive">
+                <thead>
+                    <th>Dosis</th>
+                    <th>Ingrediente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="(key, value) in detalleRecetaCtrl.receta.ingredientes">
+                        <td>{{ value.nombre }}</td>
+                        <td>{{ value.cantidad }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-1 col-sm-offset-3">
+            <table class="table table-bordered">
+                <tr ng-repeat="condimento in detalleRecetaCtrl.receta.condimentos">
+                    <td>{{ condimento.nombre }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-2">
+            <input type="checkbox" ng-model="detalleRecetaCtrl.receta.favorita" name="favorita" disabled="true">
+            <label>Favorita</label>
+        </div>
+        <div class="col-sm-3 col-sm-offset-4">
+            <label>Condiciones preexistentes</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-1 col-sm-offset-6">
+            <ul>
+                <li ng-repeat="condicion in detalleRecetaCtrl.receta.condicionesPreexistentes">
+                    {{ condicion }}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <label>Proceso de preparacion</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                {{detalleRecetaCtrl.receta.procesoDePreparacion}}
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-1 col-sm-offset-4">
+            <button type="button" class="btn btn-primary" ui-sref="recetas">Volver</button>
+        </div>
+    </div>
+</form>

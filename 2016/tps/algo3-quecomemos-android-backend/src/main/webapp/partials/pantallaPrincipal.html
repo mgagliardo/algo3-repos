@@ -1,0 +1,102 @@
+<form class="form-horizontal well well-lg">
+    <div class="form-group">
+        <div class="col-sm-3">
+            <span><h4>Busqueda de recetas</h4></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <label>Nombre</label>
+        </div>
+        <div class="col-sm-2 col-sm-offset-3">
+        <label>Calorias</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <input class="text" ng-model="recetaCtrl.criterioBusqueda.nombre">
+        </div>
+        <div class="col-sm-6 col-sm-offset-3">
+            <label>De</label>
+            <input class="number" ng-model="recetaCtrl.criterioBusqueda.caloriasMinimas">
+            <label>A</label>
+            <input class="number" ng-model="recetaCtrl.criterioBusqueda.caloriasMaximas">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <label>Dificultad</label>
+        </div>
+        <div class="col-sm-2 col-sm-offset-3">
+            <label>Temporada</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <select ng-model="recetaCtrl.criterioBusqueda.dificultad">
+                <option value=""></option>
+                <option ng-repeat="dificultad in recetaCtrl.criterioBusqueda.dificultadesPosibles" value="{{ dificultad.nombre }}">{{dificultad.nombre}}</option>
+            </select>
+        </div>
+        <div class="col-sm-2 col-sm-offset-3">
+            <select ng-model="recetaCtrl.criterioBusqueda.temporada" >
+                <option value=""></option>
+                <option ng-repeat="temporada in recetaCtrl.criterioBusqueda.temporadasPosibles" value="{{ temporada.nombre }}"> {{temporada.nombre}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <label>Contiene ingrediente</label>
+        </div>
+        <div class="col-sm-6 col-sm-offset-3">
+            <input type="checkbox" ng-model="recetaCtrl.criterioBusqueda.aplicarFiltro">
+            <label>Aplicar Filtro Usuario</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <input type="text" ng-model="recetaCtrl.criterioBusqueda.ingrediente">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <button type="button" class="btn btn-primary" ng-click="recetaCtrl.buscar()">Buscar</button>
+        </div>
+    </div>
+    <div class="form-group"  >
+        <div class="panel">
+            <div class="panel-heading">
+                <h2>Consulta de receta</h2>
+                <br>
+                <span><h5>{{recetaCtrl.mensaje}}</h5></span>
+            </div>
+            <div class="panel-body">
+                <table class="table table-bordered table-striped table-responsive">
+                    <thead>
+                        <th>Nombre</th>
+                        <th>Calorías</th>
+                        <th>Dificultad</th>
+                        <th>Temporada</th>
+                        <th>Favorita</th>
+                        <th>Copiar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-ng-repeat="receta in recetaCtrl.recetas">
+                            <td><a ui-sref="detalleReceta({nombre:receta.nombreDeLaReceta})">{{ receta.nombreDeLaReceta }}</a></td>
+                            <td>{{ receta.calorias }}</td>
+                            <td>{{ receta.dificultadDePreparacion }}</td>
+                            <td>{{ receta.temporadaALaQueCorresponde }}</td>
+                            <td><input type="checkbox" ng-model="receta.favorita"  ng-change="recetaCtrl.marcarfavorita(receta.nombreDeLaReceta)" name="favorita"></td>
+                            <td><button type="button" class="btn btn-primary" data-ng-click="recetaCtrl.copiarReceta(receta.nombreDeLaReceta)">Copiar</button>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-offset-5">
+            <button type="button" class="btn btn-primary" ui-sref="login">Logout</button>
+        </div>
+    </div>
+</form>

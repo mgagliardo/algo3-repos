@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp" android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal" android:orientation="horizontal"
+    android:showDividers="middle" tools:context=".recetaListActivity">
+
+    <!--
+    This layout is a two-pane layout for the recetas
+    master/detail flow.
+    
+    -->
+
+    <fragment android:id="@+id/receta_list" android:name="com.quecomemos.recetasApp.RecetaListFragment"
+        android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+        tools:layout="@android:layout/list_content" />
+
+    <FrameLayout android:id="@+id/receta_detail_container" android:layout_width="0dp"
+        android:layout_height="match_parent" android:layout_weight="3" />
+
+</LinearLayout>
+<!-- From: file:/Users/gaglim/Documents/UNSAM/algo3/workspace/algo3-quecomemos-android/queComemosApp/src/main/res/layout-sw600dp/activity_receta_list.xml -->

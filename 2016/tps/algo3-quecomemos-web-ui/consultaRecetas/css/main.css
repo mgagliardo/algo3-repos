@@ -1,0 +1,45 @@
+.panel {
+  width: 100%;
+  text-align: left;
+  border-color: black;
+  border-style: solid;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px; }
+  .panel .panel-heading {
+    background-color: black;
+    color: #FFFFFF;
+    height: 30px;
+    font-size: 25px; }
+  .panel .panel-body {
+    padding: 20px; }
+
+.btn, .primary, .secondary {
+  width: 80px;
+  height: 35px;
+  font-size: 16px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px; }
+
+.primary {
+  background-color: black;
+  color: #FFFFFF; }
+
+.secondary {
+  background-color: black;
+  color: #FFFFFF; }
+
+.form {
+  width: 70%; }
+  .form .form-input {
+    width: 100%;
+    display: block; }
+  .form .form-label {
+    float: left;
+    font-size: 21px; }
+
+.container {
+  width: 100%; }

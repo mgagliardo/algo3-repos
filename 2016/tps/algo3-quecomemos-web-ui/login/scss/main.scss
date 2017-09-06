@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@import 'variables',
+'mixins',
+'panel',
+'buttons',
+'form';
+
+.container {
+  width: 20%;
+}
+
+.center {
+  margin-left: 0;
+  margin-right: 0;
+  margin: auto;
+}
